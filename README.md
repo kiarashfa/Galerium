@@ -40,6 +40,6 @@ All artwork data and images come from Wikipedia and Wikimedia Commons. Galerium 
 
 © 2026 Kiarash Farajzadehahary
 
-⚖ Licensed under the [KFA Source-Available License 1.0](https://claude.ai/epitaxy/LICENSE).
+⚖ Licensed under the [KFA Source-Available License 1.0](LICENSE).
 
 Made with ❤️ for people who read every placard.

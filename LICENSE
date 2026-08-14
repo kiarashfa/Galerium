@@ -1,0 +1,180 @@
+KFA Source-Available License
+Version 1.0
+
+Copyright (c) 2026 Kiarash Farajzadehahary
+Project: Galerium
+
+This is a source-available license. It is not an open-source license as
+defined by the Open Source Initiative or the Free Software Foundation, and
+must not be described as one.
+
+1. Acceptance
+
+By downloading, forking, copying, running, or otherwise exercising any
+permission granted by this License, You agree to be bound by, and to comply
+with, all of its terms. If You do not agree, You must not exercise any such
+permission, and You have no rights under this License. This License governs
+the reproduction, modification, and deployment of the Software; it does not
+require a license from a person who merely visits a website that Licensor
+has deployed using the Software.
+
+2. Definitions
+
+"Licensor" means Kiarash Farajzadehahary.
+
+"Software" means the source code, text, data, and other files contained in
+this repository, in the form provided by Licensor, excluding any
+Third-Party Material.
+
+"You" means the individual or entity exercising rights under this License.
+
+"Source Form" means the human-readable form of the Software, as opposed to
+any compiled, minified, or otherwise machine-transformed form.
+
+"Copy" means any reproduction of the Software, in whole or in substantial
+part, in any medium, and includes a fork of the repository hosting the
+Software.
+
+"Modify" and "Derivative Work" mean, respectively, to alter, translate,
+adapt, build upon, or otherwise create a work based on the Software, and the
+work that results from doing so.
+
+"Deploy" or "Operate" mean to make the Software, a Copy of it, or a
+Derivative Work of it, available to any person other than You as a running
+website, application, program, or other network-accessible service —
+whether or not You have Modified it, and regardless of the hosting method,
+platform, or infrastructure used (including, without limitation, a personal
+server, a third-party host, a content delivery network, or a static-site
+host such as GitHub Pages).
+
+"Third-Party Material" means any font, icon, image, media file, code
+library, or other content included in, or referenced by, this repository
+that is identified, whether in the file itself, in accompanying
+documentation, or in the repository's notices, as originating from, or
+licensed by, a party other than Licensor.
+
+3. Copyright License
+
+Subject to Section 4 (Restrictions) and Your continued compliance with this
+License, Licensor grants You a worldwide, royalty-free, non-exclusive,
+non-transferable, and revocable license to:
+
+(a) read, view, and study the Software in Source Form, for any purpose;
+
+(b) download and retain a local Copy of the Software;
+
+(c) fork the repository hosting the Software using the version-control
+platform's ordinary features, and retain possession of that fork;
+
+(d) share an unmodified Copy of the Software with others, in Source Form,
+at no charge, provided that You satisfy Section 5 (Attribution) and do not
+thereby Deploy or Operate it; and
+
+(e) run the Software for Your own private, personal, non-commercial use, on
+Your own device or infrastructure not accessible to others.
+
+4. Restrictions
+
+Except as expressly permitted in Section 3, You may not, without Licensor's
+prior written permission:
+
+(a) Deploy or Operate the Software, any Copy of it, or any Derivative Work
+of it, whether Modified or unmodified — this restriction applies regardless
+of whether the resulting deployment is offered free of charge;
+
+(b) create or Modify the Software to produce a Derivative Work, or
+distribute, publish, or Deploy any Derivative Work of it;
+
+(c) use the Software, or any Copy or Derivative Work of it, for a
+commercial purpose, including selling it, sublicensing it, bundling it into
+a paid product or service, or using it to generate advertising,
+subscription, or referral revenue;
+
+(d) remove, obscure, or alter any copyright notice, attribution statement,
+or reference to this License contained in the Software; or
+
+(e) represent, state, or imply that You are the author or origin of the
+Software, or that Licensor endorses, sponsors, or is affiliated with any
+use You make of it.
+
+Nothing in this Section prevents GitHub, or any other platform hosting the
+Software, from offering its ordinary technical features, including
+repository forking. Obtaining a fork through such a feature does not, by
+itself, grant You any permission beyond those set out in Section 3; in
+particular, it does not permit You to Deploy or Operate that fork.
+
+5. Attribution
+
+Every Copy of the Software that You retain, possess, or share under this
+License must include, unmodified and in a reasonably visible location: (a)
+Licensor's original copyright notice; (b) a statement identifying Kiarash
+Farajzadehahary as the original author of the Software; and (c) the full
+text of this License, or an unmodified copy of the LICENSE file containing
+it.
+
+6. Third-Party Material
+
+This repository may include or reference Third-Party Material that is
+separately licensed and identified within the repository. This License
+applies only to Licensor's original Software, not to Third-Party Material,
+which remains governed solely by its own license.
+
+7. No Additional Rights
+
+This License grants You no rights in Licensor's trademarks, trade names,
+service marks, or logos, except to the limited extent necessary to satisfy
+Section 5. This License also grants no patent rights.
+
+8. Termination
+
+Your rights under this License terminate automatically, without notice, if
+You fail to comply with any of its terms. Upon termination, You must stop
+exercising all permissions granted in Section 3 and destroy or delete any
+Copy or Derivative Work in Your possession that was made under this
+License, except that You may retain a Copy solely for archival purposes if
+You do not exercise any other right over it. Sections 6, 7, 9, 10, and 11
+survive termination. Licensor may reinstate Your rights, in writing, at
+Licensor's sole discretion.
+
+9. Disclaimer of Warranty
+
+THE SOFTWARE IS PROVIDED "AS IS," WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING WITHOUT LIMITATION THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT. LICENSOR
+DOES NOT WARRANT THAT THE SOFTWARE WILL BE ACCURATE, RELIABLE,
+UNINTERRUPTED, OR ERROR-FREE.
+
+10. Limitation of Liability
+
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, LICENSOR WILL NOT BE
+LIABLE TO YOU FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL,
+EXEMPLARY, OR PUNITIVE DAMAGES, OR FOR ANY LOSS OF PROFITS, REVENUE, DATA,
+OR GOODWILL, ARISING OUT OF OR RELATING TO THIS LICENSE OR YOUR USE OF THE
+SOFTWARE, HOWEVER CAUSED AND UNDER ANY THEORY OF LIABILITY, EVEN IF
+LICENSOR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+11. General
+
+If any provision of this License is held unenforceable, the remaining
+provisions remain in full force, and the unenforceable provision will be
+reformed only to the extent necessary to make it enforceable. Licensor's
+failure to enforce any provision is not a waiver of it. This License is the
+entire agreement between You and Licensor concerning the Software, and
+supersedes any prior understanding regarding it, except for any separate
+written agreement signed by Licensor granting You additional rights.
+
+12. Contact
+
+Requests for permissions beyond this License — including commercial use,
+hosting, or distribution of Derivative Works — may be directed to Licensor
+at kiarashfa@gmail.com.
+
+Appendix — Project-Specific Notice
+
+This repository incorporates certain third-party material (for example,
+images, audio, or text) that is correctly and completely attributed under
+its own license within the README ("Data & credits" section), the in-app
+About panel, and the per-work license and source fields recorded in
+public/data/paintings.json. That material is governed solely by its
+original license; it is not covered by this License and this License does
+not apply to it.

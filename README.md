@@ -36,6 +36,10 @@ Admission is free, the doors never close, and there are no velvet ropes — walk
 
 ---
 
-All artwork data and images come from Wikipedia and Wikimedia Commons. Galerium is a personal, educational project — not affiliated with any museum, artist estate, or rights holder. © 2026 Kiarash Farajzadehahary
+All artwork data and images come from Wikipedia and Wikimedia Commons. Galerium is a personal, educational project — not affiliated with any museum, artist estate, or rights holder.
+
+© 2026 Kiarash Farajzadehahary
+
+⚖ Licensed under the [KFA Source-Available License 1.0](https://claude.ai/epitaxy/LICENSE).
 
 Made with ❤️ for people who read every placard.

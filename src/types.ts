@@ -9,7 +9,7 @@ export interface Period {
 }
 
 /** Gallery room size tier, assigned once from painting count and stored as
- *  permanent data (does NOT re-derive live — see scripts/museum-config.mjs). */
+ *  permanent data (does NOT re-derive live; see scripts/museum-config.mjs). */
 export type RoomTier = 'small' | 'medium' | 'large'
 
 export interface Artist {
@@ -30,9 +30,9 @@ export interface Artist {
   tier: RoomTier
 }
 
-/** Marker license for works still under copyright, included for local personal
- *  use only. Public builds can strip these in one pass (scripts/strip-restricted.mjs). */
-export const RESTRICTED_LICENSE = 'copyrighted-personal-use-only'
+/** Marker license for works whose image is not available under a free licence,
+ *  sourced from the en.wikipedia fair-use file rather than Wikimedia Commons. */
+export const RESTRICTED_LICENSE = 'in-copyright'
 
 export interface Painting {
   id: string

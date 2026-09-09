@@ -1,6 +1,6 @@
 // Data pipeline: builds /public/data/*.json and downloads all images from
 // Wikipedia + Wikimedia Commons. Every bio, story, fact, date, and image comes
-// from the live APIs — nothing is generated locally.
+// from the live APIs; nothing is generated locally.
 //
 // Hard rules enforced here:
 //  - A painting is only included if its lead image is hosted on Wikimedia
@@ -18,7 +18,7 @@ import { periods, artists } from './museum-config.mjs'
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const PUBLIC = path.join(ROOT, 'public')
-const UA = 'ArtHistoryMuseum/0.1 (local static site build; kiarashfa@gmail.com)'
+const UA = 'Galerium/1.0 (static site build; kiarashfa@gmail.com)'
 const DELAY_MS = 60
 
 const warnings = []
@@ -115,7 +115,7 @@ async function fetchArticle(title) {
 }
 
 // "No (known) restrictions" is the museum/Flickr-Commons release used for
-// works with no surviving copyright (e.g. Brooklyn Museum) — treated as PD.
+// works with no surviving copyright (e.g. Brooklyn Museum), treated as PD.
 const PD_RE = /public domain|\bcc0\b|\bpd\b|pd-|no (?:known )?(?:copyright )?restrictions/i
 // Free licenses acceptable for artist PORTRAIT photos (with credit recorded):
 // CC BY / BY-SA, and museum/Flickr-Commons "no known restrictions" releases.
@@ -151,11 +151,11 @@ async function imageInfoFrom(apiFn, fileName, thumbWidth) {
 async function commonsImage(fileName, thumbWidth, context, { quiet = false } = {}) {
   const info = await imageInfoFrom(commonsApi, fileName, thumbWidth)
   if (!info) {
-    if (!quiet) warn(`${context}: image "${fileName}" is not hosted on Wikimedia Commons — rejected`)
+    if (!quiet) warn(`${context}: image "${fileName}" is not hosted on Wikimedia Commons, rejected`)
     return null
   }
   if (!PD_RE.test(info.licenseName) && !PD_RE.test(info.licenseUrl)) {
-    if (!quiet) warn(`${context}: license "${info.licenseName || 'unknown'}" is not public domain — rejected`)
+    if (!quiet) warn(`${context}: license "${info.licenseName || 'unknown'}" is not public domain, rejected`)
     return null
   }
   return {
@@ -170,12 +170,12 @@ async function commonsImage(fileName, thumbWidth, context, { quiet = false } = {
 // Fallback for artists whose work is still under copyright (config
 // `allowNonFree: true`): use the en.wikipedia-hosted image (typically a
 // deliberately low-resolution fair-use file) and mark the entry explicitly so
-// the UI can flag it and public builds can strip it in one pass.
+// the UI can label it as in copyright.
 async function nonFreeImage(fileName, thumbWidth, context) {
   // en.wiki imageinfo also resolves Commons-hosted ("shared") files
   const info = await imageInfoFrom(wikiApi, fileName, thumbWidth)
   if (!info) {
-    warn(`${context}: non-free image "${fileName}" not found on en.wikipedia — rejected`)
+    warn(`${context}: non-free image "${fileName}" not found on en.wikipedia, rejected`)
     return null
   }
   const holder = info.artistMeta || info.creditMeta || null
@@ -183,7 +183,7 @@ async function nonFreeImage(fileName, thumbWidth, context) {
     downloadUrl: info.downloadUrl,
     width: info.width,
     height: info.height,
-    license: 'copyrighted-personal-use-only',
+    license: 'in-copyright',
     copyrightHolder: holder,
     commonsUrl: info.filePageUrl,
   }
@@ -355,7 +355,7 @@ async function buildArtist(cfg) {
       }
     }
   }
-  if (!portrait) warn(`${cfg.wikiTitle}: no freely-licensed portrait — using initial fallback`)
+  if (!portrait) warn(`${cfg.wikiTitle}: no freely-licensed portrait, using initial fallback`)
 
   const paras = paragraphs(article.extract)
   return {
@@ -390,7 +390,7 @@ async function buildPainting(entry, artistId, artistName, allowNonFree) {
   const title = typeof entry === 'string' ? entry : entry.title
   const imageOverride = typeof entry === 'string' ? null : (entry.imageFile ?? null)
   const article = await fetchArticle(title)
-  const context = `${artistName} — "${title}"`
+  const context = `${artistName}: "${title}"`
   if (!article) {
     warn(`${context}: article not found`)
     return null
@@ -401,7 +401,7 @@ async function buildPainting(entry, artistId, artistName, allowNonFree) {
     return null
   }
   // Commons + public domain first; for flagged artists fall back to the
-  // en.wiki fair-use file, marked copyrighted-personal-use-only.
+  // en.wiki fair-use file, marked in-copyright.
   let img = await commonsImage(imageName, 1600, context, { quiet: allowNonFree })
   if (!img && allowNonFree) {
     img = await nonFreeImage(imageName, 1600, context)

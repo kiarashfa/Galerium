@@ -10,7 +10,7 @@ import type { RoomSpec } from './layout'
 /** Serif typeface for the extruded 3D placard lettering (fetched, not bundled). */
 const PLACARD_FONT = `${import.meta.env.BASE_URL}fonts/gentilis_bold.typeface.json`
 
-/** Image-based lighting from three's built-in RoomEnvironment — no network fetch. */
+/** Image-based lighting from three's built-in RoomEnvironment, so no network fetch. */
 export function Env() {
   const gl = useThree((s) => s.gl)
   const scene = useThree((s) => s.scene)
@@ -71,7 +71,7 @@ export default function Room({ room, artistName, periodName, periodColor, datesT
 
   return (
     <group>
-      {/* floor — reflective planks */}
+      {/* floor: reflective planks */}
       <mesh rotation-x={-Math.PI / 2} receiveShadow>
         <planeGeometry args={[width, depth]} />
         <MeshReflectorMaterial
@@ -138,7 +138,7 @@ export default function Room({ room, artistName, periodName, periodColor, datesT
         {wallMat}
       </mesh>
 
-      {/* grand wing placard on the far short wall — GENUINE extruded/beveled 3D
+      {/* grand wing placard on the far short wall: GENUINE extruded/beveled 3D
           lettering straight on the wall (no frame/backing), gold + accent metal
           that catches the wash + picture-light spill */}
       <Suspense fallback={null}>
@@ -315,7 +315,7 @@ function ExitDoor({
 
   return (
     <group>
-      {/* warm wash over the entrance door + notices (no shadow — cheap) */}
+      {/* warm wash over the entrance door + notices (no shadow, cheap) */}
       <primitive object={washTarget} />
       <spotLight
         position={[0, doorHeight - 0.1, zWall - 5]}
@@ -483,7 +483,7 @@ function PlacardLine({
 }
 
 /** The far-wall placard as real 3D geometry: period eyebrow (accent metal),
- *  large gold name (≤2 lines), gold rule, gold dates — extruded and beveled so
+ *  large gold name (≤2 lines), gold rule, gold dates, extruded and beveled so
  *  the room's lamps and picture-light spill rake across the letters. */
 function Placard3D({
   name,
@@ -533,7 +533,7 @@ function Placard3D({
   )
 }
 
-/** Soft wash over the far-wall placard (no shadows — cheap). */
+/** Soft wash over the far-wall placard (no shadows, cheap). */
 function PlacardWash({ depth, height }: { depth: number; height: number }) {
   const target = useMemo(() => {
     const o = new THREE.Object3D()

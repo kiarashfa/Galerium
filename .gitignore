@@ -7,4 +7,5 @@ scripts/fetch-report.txt
 .claude/
 *.tsbuildinfo
 scripts/shot-*.png
-scripts/e2e-restricted.png
+
+design/favicon-candidates/

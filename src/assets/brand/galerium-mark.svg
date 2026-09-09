@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" role="img" aria-label="Galerium">
+  <title>Galerium</title>
+  <defs>
+    <clipPath id="tile"><rect width="32" height="32" rx="7"/></clipPath>
+    <linearGradient id="glow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fffaee"/><stop offset=".45" stop-color="#f3d692"/><stop offset="1" stop-color="#c8a24b"/>
+    </linearGradient>
+    <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4a3720"/><stop offset="1" stop-color="#0e0b08"/>
+    </linearGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f7e2ad" stop-opacity=".6"/><stop offset="1" stop-color="#f7e2ad" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g clip-path="url(#tile)">
+    <rect width="32" height="32" fill="#0e1320"/>
+    <path d="M0 0 L9.2 8.4 V24.2 L0 32 Z" fill="#1c2540"/>
+    <path d="M32 0 L22.8 8.4 V24.2 L32 32 Z" fill="#151c30"/>
+    <path d="M9.2 24.2 H22.8 L32 32 H0 Z" fill="url(#floor)"/>
+    <path d="M10.6 9.4 a5.4 5.4 0 0 1 10.8 0 V24.2 H10.6 Z" fill="#c8a24b"/>
+    <path d="M12.2 10.3 a3.8 3.8 0 0 1 7.6 0 V24.2 H12.2 Z" fill="url(#glow)"/>
+    <path d="M12.2 24.2 H19.8 L24.2 32 H7.8 Z" fill="url(#beam)"/>
+    <g fill="#e0b657">
+      <path d="M2.2 11.4 L8.0 15.1 V22.6 L2.2 26.0 Z"/>
+      <path d="M29.8 11.4 L24.0 15.1 V22.6 L29.8 26.0 Z"/>
+    </g>
+    <g fill="#0f1526">
+      <path d="M3.6 13.6 L6.6 15.8 V21.8 L3.6 23.8 Z"/>
+      <path d="M28.4 13.6 L25.4 15.8 V21.8 L28.4 23.8 Z"/>
+    </g>
+    <g fill="#f0d08a" opacity=".85">
+      <path d="M4.5 15.2 L5.7 16.3 V21.2 L4.5 22.0 Z"/>
+      <path d="M27.5 15.2 L26.3 16.3 V21.2 L27.5 22.0 Z"/>
+    </g>
+  </g>
+</svg>

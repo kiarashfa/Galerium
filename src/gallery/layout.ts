@@ -28,7 +28,7 @@ export const EYE_HEIGHT = 1.7
 const HANG_HEIGHT = 1.62
 
 /** Three fixed room sizes replacing the old single 10×26 room. Same width,
- *  height, materials, spacing, door and placard across all three — only the
+ *  height, materials, spacing, door and placard across all three; only the
  *  length (depth) grows, so it reads as "the same museum, bigger wing." Sized so
  *  each tier fits its whole bracket at readable STD_SPACING on the two long
  *  walls (no painting compression, no entrance-wall hanging):

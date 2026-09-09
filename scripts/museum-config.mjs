@@ -5,7 +5,7 @@
 // Commons with a public-domain license.
 
 export const periods = [
-  // Keep this array in chronological order — timeline label rows cycle by order.
+  // Keep this array in chronological order; timeline label rows cycle by order.
   {
     id: 'medieval-gothic',
     name: 'Medieval & Gothic',
@@ -1334,7 +1334,7 @@ export const artists = [
     ],
   },
 
-  // ---- Expressionism (all public domain — died before 1956) ----
+  // ---- Expressionism (all public domain, died before 1956) ----
   {
     id: 'edvard-munch',
     tier: 'large',
@@ -1438,7 +1438,7 @@ export const artists = [
     ],
   },
 
-  // ---- Surrealism (no major surrealist is PD — all flagged) ----
+  // ---- Surrealism (no major surrealist is PD, all flagged) ----
   {
     id: 'salvador-dali',
     tier: 'large',
@@ -1546,7 +1546,7 @@ export const artists = [
     ],
   },
   // Tanguy died 1955: PD in the EU since 2026 but not the US, so Commons
-  // hosting is spotty — only 3 documented painting articles exist; kept at 3.
+  // hosting is spotty; only 3 documented painting articles exist; kept at 3.
   {
     id: 'yves-tanguy',
     tier: 'small',
@@ -1626,7 +1626,7 @@ export const artists = [
       "The Tree (Gleizes)",
     ],
   },
-  // Cubism retrofit: still under copyright — flagged for local personal use.
+  // Cubism retrofit: image comes from the en.wikipedia fair-use file.
   {
     id: 'pablo-picasso',
     tier: 'large',
@@ -1693,7 +1693,7 @@ export const artists = [
     ],
   },
 
-  // ---- Abstract Expressionism (all under copyright — flagged) ----
+  // ---- Abstract Expressionism (all under copyright, flagged) ----
   {
     id: 'jackson-pollock',
     tier: 'small',
@@ -1753,7 +1753,7 @@ export const artists = [
     ],
   },
 
-  // ---- Pop Art (all under copyright — flagged) ----
+  // ---- Pop Art (all under copyright, flagged) ----
   {
     id: 'andy-warhol',
     tier: 'large',
@@ -1828,7 +1828,7 @@ export const artists = [
     ],
   },
 
-  // ---- Contemporary (all under copyright — flagged) ----
+  // ---- Contemporary (all under copyright, flagged) ----
   {
     id: 'jean-michel-basquiat',
     tier: 'large',
@@ -1913,7 +1913,7 @@ export const artists = [
       '18. Oktober 1977',
     ],
   },
-  // Bacon's median work year (~1971) sits just left of the Contemporary band —
+  // Bacon's median work year (~1971) sits just left of the Contemporary band,
   // honest to his dates; selection favors his later triptychs plus the icons.
   {
     id: 'francis-bacon',

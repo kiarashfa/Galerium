@@ -1,13 +1,14 @@
 {
-  "name": "art-history-museum",
+  "name": "galerium",
   "private": true,
-  "version": "0.1.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
-    "fetch-data": "node scripts/fetch-data.mjs"
+    "fetch-data": "node scripts/fetch-data.mjs",
+    "generate-assets": "node scripts/generate-assets.mjs"
   },
   "dependencies": {
     "@react-three/drei": "^9.114.0",

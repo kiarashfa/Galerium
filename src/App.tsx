@@ -23,7 +23,7 @@ export default function App() {
   if (!data) {
     return (
       <div className="boot-veil">
-        <div className="boot-title">Museum of Art History</div>
+        <div className="boot-title">Galerium</div>
         <div className="boot-sub">Preparing the collection…</div>
       </div>
     )
@@ -40,8 +40,11 @@ export default function App() {
           <ArtistCard />
           <AboutModal />
           <header className="masthead">
-            <div className="masthead-title">Museum of Art History</div>
-            <div className="masthead-sub">Fifteen floors of art history · 1200 – 2020</div>
+            <div className="masthead-title">Galerium</div>
+            <div className="masthead-sub">
+              {data.periods.length} floors of art history · {data.periods[0].start} –{' '}
+              {data.periods[data.periods.length - 1].end}
+            </div>
           </header>
           <button className="about-btn" onClick={() => useMuseum.getState().setAbout(true)}>
             About

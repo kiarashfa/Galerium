@@ -8,8 +8,8 @@ import { type Cam, K_MIN, clamp, easeInOutCubic, roman } from './camera'
 // The museum section as an accordion directory: fifteen floor rows stacked
 // chronologically (ground floor = Medieval & Gothic, at the bottom). Exactly
 // one floor at a time is expanded to its full room layout; the rest collapse
-// to their edge band. Rooms are standardized — their size never encodes
-// collection size — and sit at the position of the artist's real working years.
+// to their edge band. Rooms are standardized, their size never encodes
+// collection size, and they sit at the position of the artist's real working years.
 
 const SLAB_W = 1150
 const H_EXPANDED = 232
@@ -36,7 +36,7 @@ interface FloorLayout {
 }
 
 /** An artist's place on the floor: the median year of their paintings in the
- *  collection — the truest "when they worked" signal the data has. */
+ *  collection, the truest "when they worked" signal the data has. */
 function artistYear(artist: Artist, data: MuseumData, period: Period): number {
   const years = artist.paintingIds
     .map((id) => data.paintingById.get(id)?.year)
@@ -72,7 +72,7 @@ function computeFloors(data: MuseumData): FloorLayout[] {
       x: xs[i],
       y: BAND_H + 12 + (i % 2) * 16,
       number: `${index + 1}${String(i + 1).padStart(2, '0')}`,
-      years: `${artist.birthYear ?? '—'}–${artist.deathYear ?? '—'}`,
+      years: `${artist.birthYear ?? '?'}–${artist.deathYear ?? '?'}`,
     }))
 
     const ticks = Array.from({ length: 5 }, (_, i) => {
@@ -464,7 +464,7 @@ export default function Timeline() {
         })}
       </div>
 
-      {/* screen-fixed floor index — the wayfinding rail */}
+      {/* screen-fixed floor index, the wayfinding rail */}
       <nav ref={railRef} className="fp-rail" aria-label="Floor index">
         <div className="fp-rail-title">Floors</div>
         {[...floors].reverse().map((f) => (

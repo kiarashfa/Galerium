@@ -1,8 +1,9 @@
 import { useEffect } from 'react'
 import { useMuseum } from '../store'
 import { RESTRICTED_LICENSE } from '../types'
+import { COPYRIGHT_START_YEAR, COPYRIGHT_HOLDER, SITE_NAME } from '../../site.config'
 
-/** About / credits — same placard language as the artist cards. */
+/** About and credits, in the same placard language as the artist cards. */
 export default function AboutModal() {
   const data = useMuseum((s) => s.data)!
   const aboutOpen = useMuseum((s) => s.aboutOpen)
@@ -21,6 +22,10 @@ export default function AboutModal() {
 
   const restricted = data.paintings.filter((p) => p.license === RESTRICTED_LICENSE).length
 
+  const thisYear = new Date().getFullYear()
+  const copyrightYears =
+    thisYear > COPYRIGHT_START_YEAR ? `${COPYRIGHT_START_YEAR}-${thisYear}` : `${COPYRIGHT_START_YEAR}`
+
   return (
     <div className="card-scrim" onClick={() => setAbout(false)}>
       <article className="placard about-placard" onClick={(e) => e.stopPropagation()}>
@@ -31,14 +36,14 @@ export default function AboutModal() {
         <div className="placard-period" style={{ color: 'var(--gold-2)' }}>
           About this museum
         </div>
-        <h2 className="placard-name about-title">Museum of Art History</h2>
+        <h2 className="placard-name about-title">{SITE_NAME}</h2>
         <div className="placard-rule" />
 
         <div className="about-body">
           <p>
-            An interactive museum of Western painting: a zoomable timeline of{' '}
-            {data.periods.length} periods — {data.periods[0].name} to{' '}
-            {data.periods[data.periods.length - 1].name} — with {data.artists.length} artists and{' '}
+            An interactive museum of Western painting: a zoomable timeline running from{' '}
+            {data.periods[0].name} to {data.periods[data.periods.length - 1].name}, covering{' '}
+            {data.periods.length} periods, {data.artists.length} artists and{' '}
             {data.paintings.length} works, each hung in a walkable 3D gallery. The whole museum
             runs as a static web app from local files.
           </p>
@@ -55,8 +60,9 @@ export default function AboutModal() {
           </p>
           <p>
             A small number of modern works ({restricted} of {data.paintings.length}) remain under
-            copyright. They are included here for personal reference only and are marked with a red{' '}
-            <span className="about-badge">© In copyright</span> badge wherever they appear.
+            copyright. Those are shown at the low resolution Wikipedia publishes under fair use, and
+            they carry a red <span className="about-badge">© In copyright</span> badge wherever they
+            appear.
           </p>
         </div>
 
@@ -67,6 +73,10 @@ export default function AboutModal() {
           <a href="https://commons.wikimedia.org/wiki/Commons:Licensing" target="_blank" rel="noreferrer">
             Commons licensing ↗
           </a>
+        </div>
+
+        <div className="about-copyright">
+          © {copyrightYears} {COPYRIGHT_HOLDER}
         </div>
       </article>
     </div>

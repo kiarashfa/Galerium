@@ -33,7 +33,7 @@ export default function GalleryApp() {
   }, [])
 
   const [locked, setLocked] = useState(false)
-  // touch devices never attempt pointer lock — drag-look + joystick from the start
+  // touch devices never attempt pointer lock; drag-look + joystick from the start
   const [fallback, setFallback] = useState(isTouchDevice)
   const onLockError = useCallback(() => setFallback(true), [])
   const moveInput = useRef({ x: 0, y: 0 })
@@ -83,8 +83,8 @@ export default function GalleryApp() {
             periodColor={period?.color ?? '#a8843a'}
             datesText={
               artist.deathYear != null
-                ? `${artist.birthYear ?? '—'} – ${artist.deathYear}`
-                : `b. ${artist.birthYear ?? '—'}`
+                ? `${artist.birthYear ?? '?'} – ${artist.deathYear}`
+                : `b. ${artist.birthYear ?? '?'}`
             }
             register={register}
             lowSpec={isTouchDevice}

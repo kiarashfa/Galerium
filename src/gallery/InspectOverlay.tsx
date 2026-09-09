@@ -63,7 +63,7 @@ export default function InspectOverlay({ painting, artist, period }: Props) {
       v.scale = s1
       apply()
     }
-    // toggle between fit and 2.6x, anchored at (sx, sy) — used by desktop
+    // toggle between fit and 2.6x, anchored at (sx, sy); used by desktop
     // double-click and mobile double-tap alike
     const zoomToggleAt = (sx: number, sy: number) => {
       const v = view.current

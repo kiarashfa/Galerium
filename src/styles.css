@@ -1,4 +1,4 @@
-/* ===== Museum of Art History — global styles ===== */
+/* ===== Galerium: global styles ===== */
 
 :root {
   --ink: #0b0e14;
@@ -171,7 +171,7 @@ button {
   border-radius: 2px;
   pointer-events: none;
 }
-/* skewed top surface — the slab's 2.5D cap */
+/* skewed top surface: the slab's 2.5D cap */
 .fp-floor::before {
   content: '';
   position: absolute;
@@ -251,7 +251,7 @@ button {
   opacity: 1;
 }
 
-/* --- artist rooms (standardized placards — size never encodes data) --- */
+/* --- artist rooms (standardized placards, size never encodes data) --- */
 
 .fp-room {
   position: absolute;
@@ -891,6 +891,14 @@ button {
 }
 .about-meta {
   margin-top: 6px;
+}
+.about-copyright {
+  margin-top: 18px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(200, 162, 75, 0.18);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--muted);
 }
 
 /* ===== gallery ===== */

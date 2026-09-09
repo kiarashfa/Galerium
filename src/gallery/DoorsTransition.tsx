@@ -14,7 +14,7 @@ export default function DoorsTransition({ artistName, periodName }: Props) {
   const [open, setOpen] = useState(false)
   const mountedAt = useRef(performance.now())
 
-  // open when loading is done — with a minimum dwell so the doors register
+  // open when loading is done, with a minimum dwell so the doors register
   useEffect(() => {
     if (open) return
     const id = window.setInterval(() => {

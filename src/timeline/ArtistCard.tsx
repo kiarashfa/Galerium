@@ -43,11 +43,11 @@ export default function ArtistCard() {
         </div>
         <h2 className="placard-name">{artist.name}</h2>
         <div className="placard-dates">
-          {artist.birthYear} — {artist.deathYear}
+          {artist.birthYear} – {artist.deathYear}
         </div>
         {artist.description && (
           <div className="placard-role">
-            {/* drop a trailing (1606–1669)-style range — the dates line already shows it */}
+            {/* drop a trailing (1606–1669)-style range; the dates line already shows it */}
             {artist.description.replace(/\s*\(\s*\d{3,4}[\s–—-]+\d{3,4}\s*\)\s*$/, '')}
           </div>
         )}

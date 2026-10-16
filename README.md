@@ -1,6 +1,6 @@
 # Galerium
 
-**Galerium** (gallery + museum) is an interactive museum of art history that runs entirely in your browser. It opens on a zoomable, night-sky timeline where art movements float like constellations. Zoom into a period and its artists appear, positioned by the years they actually worked. Pick an artist, read their placard, and step through the doors into their own first-person 3D gallery, hung with their real paintings.
+**Galerium** (gallery + museum) is an interactive museum of art history that runs entirely in your browser. It opens on a cross-section of a museum building, with one floor per period of art history and Medieval & Gothic on the ground floor at the bottom. Open a floor, one at a time, and its artists' rooms appear, positioned by the years they actually worked. Pick an artist, read their placard, and step through the doors into their own first-person 3D gallery, hung with their real paintings.
 
 ## What's inside
 

@@ -17,9 +17,9 @@ export const GA_MEASUREMENT_ID = 'G-RW1V65JMNV'
 export const SITE_NAME = 'Galerium'
 export const SITE_TITLE = 'Galerium: A Museum of Art History'
 export const SITE_DESCRIPTION =
-  'A museum of art history you can walk through in your browser. Zoom a night-sky ' +
-  'timeline of fifteen periods, pick an artist, and step into their own 3D gallery ' +
-  'hung with their real paintings. Every fact and image comes from Wikipedia.'
+  'A museum of art history you can walk through in your browser. Explore a museum ' +
+  'building with a floor for each of fifteen periods, pick an artist, and step into their own ' +
+  '3D gallery hung with their real paintings. Every fact and image comes from Wikipedia.'
 
 /** From the site design tokens in src/styles.css (--ink). */
 export const THEME_COLOR = '#0b0e14'

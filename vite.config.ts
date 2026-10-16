@@ -40,7 +40,7 @@ const webManifest = JSON.stringify(
 /**
  * Fans site.config.ts out to every place that needs it:
  *   - fills the %TOKEN% placeholders in index.html and public/404.html
- *   - emits robots.txt and sitemap.xml with the real deployed URL
+ *   - emits robots.txt and sitemap-index.xml with the real deployed URL
  * so the site URL and the analytics ID each live in exactly one file.
  */
 function siteMetadata(): Plugin {
@@ -81,14 +81,14 @@ function siteMetadata(): Plugin {
           'User-agent: *',
           'Allow: /',
           '',
-          `Sitemap: ${SITE_URL}sitemap.xml`,
+          `Sitemap: ${SITE_URL}sitemap-index.xml`,
           '',
         ].join('\n'),
       })
 
       this.emitFile({
         type: 'asset',
-        fileName: 'sitemap.xml',
+        fileName: 'sitemap-index.xml',
         source: [
           '<?xml version="1.0" encoding="UTF-8"?>',
           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',

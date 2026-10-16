@@ -207,7 +207,12 @@ export default function InspectOverlay({ painting, artist, period }: Props) {
             <span>
               Included for educational use only.<br />
               Low-resolution image used under fair use.
-              {painting.copyrightHolder && <><br />Rights: {painting.copyrightHolder}.</>}
+              {painting.copyrightHolder && (
+                <>
+                  <br />
+                  Rights: <RightsText text={painting.copyrightHolder} />.
+                </>
+              )}
             </span>
           </div>
         )}
@@ -233,5 +238,36 @@ export default function InspectOverlay({ painting, artist, period }: Props) {
         </div>
       </aside>
     </div>
+  )
+}
+
+const URL_RE = /(https?:\/\/[^\s()]+|www\.[^\s()]+)/g
+
+/** Rights text scraped from Wikipedia often contains raw source URLs; show those as short
+ *  host-name links so they don't blow out the panel width. */
+function RightsText({ text }: { text: string }) {
+  const clean = text.replace(/&amp;/g, '&').trim().replace(/\.$/, '')
+  return (
+    <>
+      {clean.split(URL_RE).map((part, i) => {
+        if (i % 2 === 0) return part
+        const url = part.replace(/[.,;]+$/, '')
+        const href = url.startsWith('www.') ? `https://${url}` : url
+        let label = url
+        try {
+          label = new URL(href).hostname.replace(/^www\./, '')
+        } catch {
+          // keep the raw text; CSS wraps it
+        }
+        return (
+          <span key={i}>
+            <a href={href} target="_blank" rel="noreferrer">
+              {label} ↗
+            </a>
+            {part.slice(url.length)}
+          </span>
+        )
+      })}
+    </>
   )
 }

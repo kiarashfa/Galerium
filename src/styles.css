@@ -1290,6 +1290,15 @@ button {
   line-height: 1.45;
   color: rgba(42, 33, 24, 0.85);
 }
+.lightbox-copyright > span:last-child {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.lightbox-copyright a {
+  color: #9b3728;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
 .lightbox-copyright-badge {
   flex: none;
   padding: 2px 8px;
